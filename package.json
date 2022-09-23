@@ -1,0 +1,46 @@
+{
+  "name": "tenor-task",
+  "version": "0.0.1",
+  "description": "Task for Kosik.cz",
+  "productName": "Tenor Task",
+  "author": "daniel.rataj@centrum.cz",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
+    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "favicons": "icongenie generate -m spa -i ./src/assets/logo.png",
+    "test:e2e": "cross-env NODE_ENV=test start-test \"quasar dev\" http-get://localhost:9000 \"cypress open\"",
+    "test:e2e:ci": "cross-env NODE_ENV=test start-test \"quasar dev\" http-get://localhost:9000 \"cypress run\"",
+    "test:component": "cross-env NODE_ENV=test cypress open-ct",
+    "test:component:ci": "cross-env NODE_ENV=test cypress run-ct"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.21.1",
+    "pinia": "^2.0.11",
+    "quasar": "^2.6.0",
+    "vue": "^3.0.0",
+    "vue-i18n": "^9.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^3.3.1",
+    "@quasar/app-vite": "^1.0.0",
+    "@quasar/quasar-app-extension-testing": "^2.0.4",
+    "@quasar/quasar-app-extension-testing-e2e-cypress": "^4.2.1",
+    "autoprefixer": "^10.4.2",
+    "dotenv": "^16.0.2",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "gh-pages": "^4.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.5.1",
+    "eslint-plugin-cypress": "^2.11.3"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
